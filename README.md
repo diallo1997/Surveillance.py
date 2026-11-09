@@ -14,45 +14,49 @@ Journalisation des événements détectés.
 Validation du fonctionnement sur matériel réel.
 
 
-Architecture du système
+## Architecture du système
 
 Capteur de mouvement
-│
-▼
-Raspberry Pi 4
-│
-▼
-Application Python
-│
-├── Traitement des événements
-├── Détection d'intrusion
-└── Gestion des alertes
-│
-▼
-Service Gmail SMTP
-│
-▼
-Courriel d'alerte
-Technologies utilisées
+         │
+         ▼
+   Raspberry Pi 4
+         │
+         ▼
+ Application Python
+         │
+         ├── Traitement des événements
+         ├── Détection d'intrusion
+         └── Gestion des alertes
+                    │
+                    ▼
+             Service Gmail SMTP
+                    │
+                    ▼
+          Courriel d'alerte
+
+## Technologies utilisées
 Python
 Raspberry Pi 4
 Linux (Raspberry Pi OS)
 GPIO
 SMTP (Gmail)
 Kit Arduino et capteurs de mouvement
-Fonctionnement
+
+## Fonctionnement
 Le capteur surveille les mouvements dans la zone protégée.
 Lorsqu'un mouvement est détecté, le Raspberry Pi reçoit le signal.
 Le programme Python analyse l'événement.
 Une alerte est générée si les critères de détection sont satisfaits.
 Un courriel est envoyé automatiquement au propriétaire avec les détails de l'événement.
-Défis techniques relevés
+
+## Défis techniques relevés
 Communication entre le matériel et le logiciel.
 Lecture des données provenant des capteurs via les GPIO.
 Gestion des alertes en temps réel.
 Configuration sécurisée de l'envoi de courriels.
 Tests et validation sur système physique.
-Compétences développées
+
+## Compétences développées
 Développement Python.
 Systèmes embarqués.
 Interaction logiciel-matériel.
@@ -60,6 +64,7 @@ Acquisition et traitement de données.
 Débogage et résolution de problèmes.
 Tests sur matériel physique.
 Conception de systèmes temps réel.
-Résultats
+
+## Résultats
 
 Le système permet de détecter efficacement les mouvements dans une zone surveillée et d'envoyer instantanément une notification par courriel à l'utilisateur. Ce projet m'a permis d'acquérir une expérience pratique en développement embarqué, en intégration matériel-logiciel et en validation de systèmes physiques.
