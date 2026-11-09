@@ -1,5 +1,5 @@
 # Système de détection d'intrusion résidentiel
-##Description
+## Description
 
 Ce projet consiste en la conception et au développement d'un système de détection d'intrusion résidentiel utilisant un Raspberry Pi 4 et des capteurs de mouvement. L'objectif est de surveiller une zone définie et de notifier automatiquement le propriétaire lorsqu'une présence suspecte est détectée.
 
