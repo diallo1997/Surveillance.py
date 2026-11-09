@@ -1,79 +1,63 @@
-Système de détection d'intrusion résidentiel avec Raspberry Pi
+Système de détection d'intrusion résidentiel
 Description
-Ce projet consiste à concevoir et développer un système de détection d'intrusion résidentiel basé sur un Raspberry Pi 4 et des capteurs de mouvement. Le système surveille en temps réel une zone définie et envoie automatiquement une alerte par courriel lorsqu'une présence est détectée.
 
-L'objectif du projet était de mettre en pratique les concepts de systèmes embarqués, d'interaction logiciel-matériel et de développement Python sur une plateforme physique.
+Ce projet consiste en la conception et au développement d'un système de détection d'intrusion résidentiel utilisant un Raspberry Pi 4 et des capteurs de mouvement. L'objectif est de surveiller une zone définie et de notifier automatiquement le propriétaire lorsqu'une présence suspecte est détectée.
+
+Le système collecte les données provenant des capteurs connectés au Raspberry Pi, analyse les événements en temps réel et déclenche une alerte par courriel lorsque les conditions de détection sont remplies.
 
 Fonctionnalités
-Détection de mouvement en temps réel à l'aide de capteurs.
-Surveillance continue d'une zone résidentielle.
-Traitement et analyse des événements détectés.
+Détection de mouvement à l'aide de capteurs connectés au Raspberry Pi.
+Surveillance en temps réel de l'environnement.
+Analyse des événements générés par les capteurs.
 Envoi automatique d'alertes par courriel via Gmail.
-Journalisation des événements d'intrusion.
-Validation du système sur matériel physique.
-Architecture
-+-------------------+
-| Capteur PIR       |
-| (Détection)       |
-+---------+---------+
-          |
-          v
-+-------------------+
-| Raspberry Pi 4    |
-+---------+---------+
-          |
-          v
-+-------------------+
-| Application       |
-| Python            |
-+---------+---------+
-          |
-          v
-+-------------------+
-| Service SMTP      |
-| Gmail             |
-+---------+---------+
-          |
-          v
-+-------------------+
-| Courriel d'alerte |
-+-------------------+
-Fonctionnement
-Le capteur de mouvement détecte une présence dans la zone surveillée.
-Le signal est transmis au Raspberry Pi via les GPIO.
-Le programme Python analyse l'événement en temps réel.
-Une alerte est générée lorsqu'une intrusion est détectée.
-Un courriel est envoyé automatiquement au propriétaire avec les informations relatives à l'événement.
-Réalisations techniques
-Développement de scripts Python pour la lecture et le traitement des données des capteurs.
-Configuration des ports GPIO du Raspberry Pi.
-Intégration du protocole SMTP pour l'envoi automatisé de courriels.
-Débogage des interactions entre les composants matériels et logiciels.
-Réalisation de tests fonctionnels sur équipement physique.
-Validation du système dans différents scénarios de détection.
+Journalisation des événements détectés.
+Validation du fonctionnement sur matériel réel.
+Architecture du système
+Plain Text
+Capteur de mouvement
+│
+▼
+Raspberry Pi 4
+│
+▼
+Application Python
+│
+├── Traitement des événements
+├── Détection d'intrusion
+└── Gestion des alertes
+│
+▼
+Service Gmail SMTP
+│
+▼
+Courriel d'alerte
 Technologies utilisées
 Python
 Raspberry Pi 4
-Raspberry Pi OS (Linux)
+Linux (Raspberry Pi OS)
 GPIO
 SMTP (Gmail)
-Capteur PIR
-Arduino Sensor Kit
+Kit Arduino et capteurs de mouvement
+Fonctionnement
+Le capteur surveille les mouvements dans la zone protégée.
+Lorsqu'un mouvement est détecté, le Raspberry Pi reçoit le signal.
+Le programme Python analyse l'événement.
+Une alerte est générée si les critères de détection sont satisfaits.
+Un courriel est envoyé automatiquement au propriétaire avec les détails de l'événement.
+Défis techniques relevés
+Communication entre le matériel et le logiciel.
+Lecture des données provenant des capteurs via les GPIO.
+Gestion des alertes en temps réel.
+Configuration sécurisée de l'envoi de courriels.
+Tests et validation sur système physique.
 Compétences développées
-Développement Python
-Systèmes embarqués
-Interaction logiciel-matériel
-Acquisition et traitement de données
-Communication via GPIO
-Débogage et résolution de problèmes
-Tests et validation sur systèmes physiques
-Surveillance en temps réel
+Développement Python.
+Systèmes embarqués.
+Interaction logiciel-matériel.
+Acquisition et traitement de données.
+Débogage et résolution de problèmes.
+Tests sur matériel physique.
+Conception de systèmes temps réel.
 Résultats
-Le système permet de détecter efficacement les mouvements dans une zone surveillée et d'envoyer instantanément une notification par courriel à l'utilisateur. Ce projet a permis d'acquérir une expérience pratique en systèmes embarqués, en intégration matériel-logiciel et en validation de solutions sur matériel réel.
 
-Apprentissage
-Compréhension du fonctionnement des systèmes embarqués.
-Maîtrise de la communication avec des capteurs via GPIO.
-Mise en œuvre d'un système d'alerte automatisé.
-Validation et diagnostic des comportements observés sur matériel physique.
-Développement d'une solution complète allant du matériel jusqu'à l'interface utilisateur finale.
+Le système permet de détecter efficacement les mouvements dans une zone surveillée et d'envoyer instantanément une notification par courriel à l'utilisateur. Ce projet m'a permis d'acquérir une expérience pratique en développement embarqué, en intégration matériel-logiciel et en validation de systèmes physiques.
